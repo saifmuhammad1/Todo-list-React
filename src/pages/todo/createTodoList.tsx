@@ -137,7 +137,9 @@ const CreateTodoList = ({
                 {...register("title")}
                 disabled={type === "show"}
               />
-              {<span className="text-red">{errors.title?.message} </span>}
+              {errors.title?.message && (
+                <span className="text-red-500">{errors.title.message}</span>
+              )}
             </div>
 
             <div className="grid gap-3">
